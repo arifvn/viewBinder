@@ -4,6 +4,7 @@ Library to make ViewBinding easier to implement.
 This is just simpler version of these awesome articles.💙
 - [Article by Kirill Rozov](https://proandroiddev.com/make-android-view-binding-great-with-kotlin-b71dd9c87719)
 - [Article by Seanghay](https://proandroiddev.com/viewbinding-with-kotlin-property-delegate-c907682e24c9)
+
 They have created more robust lib. You can check that out.
 
 #### How to implement
@@ -46,12 +47,13 @@ They have created more robust lib. You can check that out.
 4. Using in Fragment
 ```kotlin
   class ProfileFragment : Fragment() {
-
+      // initialize binding
       private val binding: FragmentProfileBinding by viewBinder()
-
+     
       override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
           super.onViewCreated(view, savedInstanceState)
-
+          
+          // use it as usual
           binding.tvUsername.text = "John Doe"
       }
   }
