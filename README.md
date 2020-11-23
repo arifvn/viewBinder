@@ -8,7 +8,16 @@ This is just simpler version of these awesome articles.💙
 They have created more robust lib. You can check that out.
 
 #### How to implement
-1. Enable viewBinding in your `build.gradle` file
+1. Add it in your root build.gradle at the end of repositories
+```
+  allprojects {
+      repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+      }
+	}
+```
+2. Enable viewBinding in your `build.gradle` file
 ```
   android {
       ...
@@ -23,14 +32,16 @@ They have created more robust lib. You can check that out.
       }
   }
 ```
-2. Add these dependencies
+3. Add these dependencies
 ```
 implementation "androidx.lifecycle:lifecycle-runtime:2.2.0"
 implementation "androidx.lifecycle:lifecycle-common-java8:2.2.0"
 implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
 implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+
+implementation 'com.github.potatocandie:viewBinder:0.1.0'
 ```
-3. Using in Activity
+4. Using in Activity
 ```kotlin
   class MainActivity : AppCompatActivity() {
       // initialize binding
@@ -46,7 +57,7 @@ implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
       }
   }
  ```
-4. Using in Fragment
+5. Using in Fragment
 ```kotlin
   class ProfileFragment : Fragment() {
       // initialize binding
