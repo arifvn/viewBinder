@@ -15,7 +15,7 @@ They have created more robust lib. You can check that out.
         ...
         maven { url 'https://jitpack.io' }
       }
-	}
+  }
 ```
 2. Enable viewBinding in your `build.gradle` file
 ```
