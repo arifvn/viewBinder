@@ -57,9 +57,32 @@ implementation 'com.github.potatocandie:viewBinder:0.1.0'
       }
   }
  ```
-5. Using in Fragment
+5. Using in Activity as NavController 
+You can use built-in kotlin lazy function instead.
 ```kotlin
-  class ProfileFragment : Fragment() {
+  // pass layout as argument
+  class MainActivity : AppCompatActivity(R.layout.activity_main) {
+      // initialize viewbinding
+      private val binding: ActivityMainBinding by lazy {
+          ActivityMainBinding.bind(findViewById<ViewGroup>(android.R.id.content)[0])
+      }
+
+      override fun onCreate(savedInstanceState: Bundle?) {
+          super.onCreate(savedInstanceState)
+
+          val navController = findNavController(R.id.nav_host_fragment)
+          
+          // it would throw an error if you use viewBinder, that's why I recommend you to use built-in lazy function instead.
+          binding.bottomNav.setupWithNavController(navController)
+      }
+  }
+ ```
+
+6. Using in Fragment
+```kotlin
+  // pass layout id in the constructor
+  class ProfileFragment : Fragment(R.layout.fragment_profile) {
+  
       // initialize binding
       private val binding: FragmentProfileBinding by viewBinder()
      
