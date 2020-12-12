@@ -34,7 +34,7 @@ They have created more robust lib. You can check that out.
 ```
 3. Add these dependencies
 ```
-implementation 'com.github.potatocandie:viewBinder:0.1.0'
+implementation 'com.github.potatocandie:viewBinder:0.1.1'
 ```
 4. Using in Activity
 ```kotlin
