@@ -34,11 +34,6 @@ They have created more robust lib. You can check that out.
 ```
 3. Add these dependencies
 ```
-implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
-implementation "androidx.lifecycle:lifecycle-common-java8:2.2.0"
-implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
-implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
-
 implementation 'com.github.potatocandie:viewBinder:0.1.0'
 ```
 4. Using in Activity
